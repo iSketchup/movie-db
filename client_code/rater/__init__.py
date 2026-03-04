@@ -17,7 +17,7 @@ class rater(raterTemplate):
     """Füllt die Sterne bis zur gewählten Zahl aus."""
     self.rating = count
     stars = [self.star_1, self.star_2, self.star_3, self.star_4, self.star_5]
-    print(stars)
+    
     for i, star in enumerate(stars):
       if i < count:
         star.icon = "fa:star"   # Gefüllter Stern

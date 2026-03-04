@@ -1,4 +1,5 @@
 from ._anvil_designer import MovieTemplate
+from ..rater import rater
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -17,8 +18,7 @@ class Movie(MovieTemplate):
     self.IM_Cover.source = rev['CoverURL']
 
     rev = anvil.server.call('query_database_dict_Ratings')
-    for rating in rev:
-      self.RP_Ratings.
+    self.RP_Ratings.items=rev
     # Any code you write here will run before the form opens.
 
   @handle("Homepage", "click")
