@@ -17,7 +17,10 @@ db_schema:
       type: string
     server: full
     title: Files
-dependencies: []
+dependencies:
+- dep_id: dep_usx2ilpqf9am3e
+  resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+  version: {version_tag: v3.6.1}
 name: Movie db
 package_name: Movie_db
 renamed: true
