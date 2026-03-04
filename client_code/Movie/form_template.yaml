@@ -4,18 +4,14 @@ components:
     name: IM_Cover
     properties: {display_mode: fill_width, height: 37.80000305175781}
     type: Image
-  - layout_properties: {grid_position: 'NULUKB,HMRDBE'}
-    name: label_2
-    properties: {text: '-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
-    type: Label
+  - layout_properties: {grid_position: 'XTQGWY,MKUYQF'}
+    name: spacer_1
+    properties: {height: 32}
+    type: Spacer
   - layout_properties: {grid_position: 'ZRIRUC,MQZLTS'}
     name: RP_Ratings
     properties: {item_template: Movie.IT_Ratings, visible: true}
     type: RepeatingPanel
-  - layout_properties: {grid_position: 'SZYKDB,OJWGVC'}
-    name: label_1
-    properties: {text: '-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
-    type: Label
   layout_properties: {slot: default}
   name: content_panel
   properties: {}

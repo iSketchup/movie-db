@@ -18,3 +18,4 @@ class IT_Ratings(IT_RatingsTemplate):
     self.column_panel.add_component(neuer_rater)
 
     self.LB_Comment.text = self.item['Comment']
+    self.LB_TimeStamp.text = self.item['Timestamp']
