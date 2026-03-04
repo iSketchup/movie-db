@@ -16,6 +16,9 @@ class Movie(MovieTemplate):
     print(rev)
     self.IM_Cover.source = rev['CoverURL']
 
+    rev = anvil.server.call('query_database_dict_Ratings')
+    for rating in rev:
+      self.RP_Ratings.
     # Any code you write here will run before the form opens.
 
   @handle("Homepage", "click")

@@ -23,8 +23,8 @@ def query_database_dict_All_Movies():
   return [dict(row) for row in result]
 
 @anvil.server.callable
-def query_database_dict_Movie(id:int):
-  query = f'SELECT * FROM MOVIE WHERE MID={id}'
+def query_database_dict_Ratings():
+  query = 'SELECT * FROM RATING'
   with sqlite3.connect(data_files["movies.db"]) as conn:
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
