@@ -11,7 +11,6 @@ class IT_Ratings(IT_RatingsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
-    print(self.item)
     # Any code you write here will run before the form opens.
     neuer_rater = rater(self.item['rating'])
 

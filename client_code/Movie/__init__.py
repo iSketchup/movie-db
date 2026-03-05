@@ -14,12 +14,14 @@ class Movie(MovieTemplate):
 
     rev = anvil.server.call('query_database_dict_All_Movies')
     rev = rev[id-1]
-    print(rev)
     self.IM_Cover.source = rev['CoverURL']
 
-    rev = anvil.server.call('query_database_dict_Ratings', rev['MID'])
-    print(rev)
-    self.RP_Ratings.items=rev
+    revR = anvil.server.call('query_database_dict_Ratings', rev['MID'])
+    self.RP_Ratings.items=revR
+    
+    revA = anvil.server.call('query_database_dict_Actors', rev['MID'])
+    
+    self.RP_Actors.items=revA
     # Any code you write here will run before the form opens.
 
   @handle("Homepage", "click")
