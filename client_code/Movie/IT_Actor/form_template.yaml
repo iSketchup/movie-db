@@ -12,5 +12,7 @@ components:
   name: column_panel_1
   properties: {wrap_on: never}
   type: ColumnPanel
-container: {type: ColumnPanel}
+container:
+  properties: {col_spacing: medium}
+  type: ColumnPanel
 is_package: true
