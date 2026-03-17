@@ -20,8 +20,19 @@ class Movie(MovieTemplate):
     self.RP_Ratings.items=revR
     
     revA = anvil.server.call('query_database_dict_Actors', rev['MID'])
+
+    for row in revA:
+      
+      picture=Image(source=row['ImageURL'])
+      name=Label(text=row['Name'])
+
+      lin_panel=LinearPanel()
+      lin_panel.add_component(picture)
+      lin_panel.add_component(name)
+
+      self.FP_Actors.add_component(lin_panel)
+
     
-    self.RP_Actors.items=revA
     # Any code you write here will run before the form opens.
 
   @handle("Homepage", "click")
