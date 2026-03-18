@@ -41,9 +41,15 @@ class Movie(MovieTemplate):
 
       self.FP_Actors.add_component(lin_panel)
 
+    revG = anvil.server.call('query_database_dict_Genre', rev['MID'])
+    revG = revG[0]
+    self.lb_Genre.text = revG['Name']
+    
+    revSt = anvil.server.call('query_database_dict_Studio', rev['MID'])
+    revSt= revSt[0]
+    self.lb_Studio.text = revSt['Name']
 
-    revS = anvil.server.call('query_database_dict_Success', rev['MID'])
-    print(revS)
+    
     
     # Any code you write here will run before the form opens.
 

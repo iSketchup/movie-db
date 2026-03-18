@@ -27,10 +27,10 @@ components:
           name: lb_Genre
           properties: {}
           type: Label
-        - layout_properties: {grid_position: 'QIHNXB,NEUDHC'}
-          name: lb_Studio
+        - layout_properties: {grid_position: 'TPTTPK,GOFNZU'}
+          name: lk_Studio
           properties: {}
-          type: Label
+          type: Link
         layout_properties: {grid_position: 'JNBRBS,YERSKR'}
         name: column_panel_4
         properties: {}
@@ -39,9 +39,9 @@ components:
         name: RP_Ratings
         properties: {item_template: Movie.IT_Ratings, visible: true}
         type: RepeatingPanel
-      layout_properties: {width: 673.166684765625}
+      layout_properties: {width: 990.5246689453126}
       name: column_panel_2
-      properties: {col_widths: '{"DHIFSF":38,"YERSKR":22}'}
+      properties: {col_widths: '{"DHIFSF":30,"YERSKR":30}'}
       type: ColumnPanel
     layout_properties: {grid_position: ''}
     name: flow_panel_1
