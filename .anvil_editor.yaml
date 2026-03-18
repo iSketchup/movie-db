@@ -9,6 +9,7 @@ unique_ids:
     Movie.IT_Ratings: '1772620465399729811291869.0404'
     Success: '1773840384088127586369259.2768'
     rater: '1772621080340952665136722.328'
+    ringchart: '1773843237732373224247750.9945'
   modules: {}
   scripts: {}
   server_modules:

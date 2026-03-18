@@ -22,6 +22,7 @@ dependencies:
   resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
   version: {version_tag: v3.6.1}
 name: Movie db
+native_deps: {head_html: ''}
 package_name: Movie_db
 renamed: true
 runtime_options:

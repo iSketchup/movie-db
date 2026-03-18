@@ -1,5 +1,6 @@
 from ._anvil_designer import MovieTemplate
 from ..rater import rater
+from ..Success import Success
 from anvil import *
 import plotly.graph_objects as go
 import anvil.server
@@ -13,10 +14,13 @@ class Movie(MovieTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+
     rev = anvil.server.call('query_database_dict_All_Movies')
     rev = rev[id-1]
     self.IM_Cover.source = rev['CoverURL']
 
+    self.CP_Success.add_component(Success(rev['MID']))
+    
     revR = anvil.server.call('query_database_dict_Ratings', rev['MID'])
     self.RP_Ratings.items=revR
     

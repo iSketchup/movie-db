@@ -320,6 +320,7 @@ roles:
 - components: [Label, Link]
   name: display
 - components: [Label, Link]
+  display_in_toolbox: false
   name: headline
 - components: [Label, Link]
   name: title
