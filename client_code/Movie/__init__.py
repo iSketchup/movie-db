@@ -1,6 +1,7 @@
 from ._anvil_designer import MovieTemplate
 from ..rater import rater
 from anvil import *
+import plotly.graph_objects as go
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -24,11 +25,15 @@ class Movie(MovieTemplate):
     for row in revA:
       
       picture=Image(source=row['ImageURL'])
+      picture.height = 150
+      picture.display_mode = 'shrink_to_fit'
+      
       name=Label(text=row['Name'])
 
       lin_panel=LinearPanel()
       lin_panel.add_component(picture)
       lin_panel.add_component(name)
+      
 
       self.FP_Actors.add_component(lin_panel)
 
