@@ -32,6 +32,9 @@ class Movie(MovieTemplate):
 
       self.FP_Actors.add_component(lin_panel)
 
+
+    revS = anvil.server.call('query_database_dict_Success', rev['MID'])
+    print(revS)
     
     # Any code you write here will run before the form opens.
 

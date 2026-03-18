@@ -10,5 +10,5 @@ class Homepage(HomepageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.RP_Movies.items =  anvil.server.call('query_database_dict_All_Movies')
+    self.RP_Movies.items = anvil.server.call('query_database_dict_All_Movies')
     # Any code you write here will run before the form opens.

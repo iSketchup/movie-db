@@ -2,7 +2,7 @@ components:
 - components:
   - layout_properties: {full_width_row: false, grid_position: 'OLRXIA,OXQLOA'}
     name: IM_Cover
-    properties: {display_mode: fill_width, height: 37.80000305175781}
+    properties: {display_mode: shrink_to_fit, height: 479.6666259765625}
     type: Image
   - components:
     - components: []
