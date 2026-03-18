@@ -4,7 +4,7 @@ components:
     - name: RP_Movies
       properties: {item_template: RT_Movie}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'TDFLEC,TAPVXX'}
+    layout_properties: {grid_position: 'RPEYIC,JWANFT'}
     name: DG_Movies
     properties:
       columns:
@@ -15,9 +15,15 @@ components:
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{}'}
+  properties: {}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: lk_Homepage
+    properties: {text: Homepage, visible: true}
+    type: Link
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel

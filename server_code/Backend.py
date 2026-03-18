@@ -60,3 +60,17 @@ def query_database_dict_Genre(id:int):
     cur = conn.cursor()
     result = cur.execute(query).fetchall()
   return [dict(row) for row in result]
+
+
+@anvil.server.callable
+def query_database_dict_Movie(sid:int):
+  query = f'''
+        SELECT MOVIE.* FROM MOVIE 
+        JOIN STUDIO ON MOVIE.MID = STUDIO.MID 
+        WHERE STUDIO.SID = {sid}
+    '''
+  with sqlite3.connect(data_files["movies.db"]) as conn:
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+    result = cur.execute(query).fetchall()
+  return [dict(row) for row in result]

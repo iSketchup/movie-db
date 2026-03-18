@@ -17,6 +17,9 @@ class Movie(MovieTemplate):
 
     rev = anvil.server.call('query_database_dict_All_Movies')
     rev = rev[id-1]
+
+    self.Title = rev['Title']
+    self.rt_Title.content = f'# {self.Title}'
     self.IM_Cover.source = rev['CoverURL']
 
     self.CP_Success.add_component(Success(rev['MID']))
@@ -46,8 +49,8 @@ class Movie(MovieTemplate):
     self.lb_Genre.text = revG['Name']
     
     revSt = anvil.server.call('query_database_dict_Studio', rev['MID'])
-    revSt= revSt[0]
-    self.lb_Studio.text = revSt['Name']
+    self.revSt= revSt[0]
+    self.lk_Studio.text = self.revSt['Name']
 
     
     
@@ -57,3 +60,8 @@ class Movie(MovieTemplate):
   def Homepage_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('Homepage')
+
+  @handle("lk_Studio", "click")
+  def lk_Studio_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Studio', self.revSt['SID'])
