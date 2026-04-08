@@ -15,8 +15,17 @@ class RT_Movie(RT_MovieTemplate):
 
   def form_show(self, **event_args):
     """Wird aufgerufen, wenn die Zeile angezeigt wird"""
-    # Registriert den Klick auf die gesamte Zeile
-    jQuery(anvil.js.get_dom_node(self)).on("click", self.row_click)
+    # Registriert den Klick auf die gesamte Zeilefrom anvil.js.window import jQuery
+
+    node = anvil.js.get_dom_node(self)
+
+    jQuery(node).css({
+    "cursor": "pointer",
+    "transition": "background-color 0.2s ease"
+    }).on("click", self.row_click).hover(
+    lambda: jQuery(node).css("background-color", "#f0f4ff"),
+    lambda: jQuery(node).css("background-color", "")
+)
 
   def row_click(self, js_event):
     """Die Funktion, die beim Klick ausgeführt wird"""
