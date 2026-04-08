@@ -23,8 +23,8 @@ class RT_Movie(RT_MovieTemplate):
     "cursor": "pointer",
     "transition": "background-color 0.2s ease"
     }).on("click", self.row_click).hover(
-    lambda: jQuery(node).css("background-color", "#f0f4ff"),
-    lambda: jQuery(node).css("background-color", "")
+    lambda e: jQuery(node).css("background-color", f"{app.theme_colors['Surface Variant']}"),
+    lambda e: jQuery(node).css("background-color", "")
 )
 
   def row_click(self, js_event):
